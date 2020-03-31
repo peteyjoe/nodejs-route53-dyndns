@@ -1,1 +1,1 @@
-{"Comment": "Updated using the peteyjoe nodejs ddns server", "Changes": [{"Action": "UPSERT","ResourceRecordSet": {"Name": "secure.peteyjoe.com","Type": "A","TTL": 300,"ResourceRecords": [{"Value": "174.72.81.181"}]}}]}
+{"Comment": "Updated using the peteyjoe nodejs ddns server", "Changes": [{"Action": "UPSERT","ResourceRecordSet": {"Name": "secure.peteyjoe.com","Type": "A","TTL": 300,"ResourceRecords": [{"Value": ""}]}}]}
