@@ -1,6 +1,6 @@
 const HOSTED_ZONE_ID = "Z2I7AU9P9J59CP"; //The ID of the hosted zone that you want to update
 
-const RECORD_SET = "secure.peteyjoe.com"; //The record set that you want to update i.e. website.example.com
+const RECORD_SET = "example.peteyjoe.com"; //The record set that you want to update i.e. website.example.com
 
 const RECORD_SET_TYPE = "A"; //The type of the record set, this program only supports IPV4, so leave as type A
 
