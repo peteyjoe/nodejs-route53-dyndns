@@ -8,7 +8,7 @@ const TIME_TO_LIVE = 300; //The time to live of the record set (AWS default is 3
 
 const REPEAT_CYCLE = 10000; //How often you want to check that the ip address has changed in milliseconds i.e. 60000 = 1 minute
 
-const DISPLAY_NOCHANGE_MESSAGE = true; //If this is set to true, then every ip check, it will show in the terminal "no change"
+const DISPLAY_NOCHANGE_MESSAGE = false; //If this is set to true, then every ip check, it will show in the terminal "no change"
 
 module.exports = {
     HOSTED_ZONE_ID,
