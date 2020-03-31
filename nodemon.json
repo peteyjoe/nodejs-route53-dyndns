@@ -1,0 +1,6 @@
+{
+    "ignore": [
+        "change-record-set.json",
+        "currentIP.txt"
+    ]
+}
