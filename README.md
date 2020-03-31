@@ -69,7 +69,7 @@ You should get the version numbers by typing this
 
 5. Installing required modules
 
-Clone the files into an empty folder, then download the required modules by typing these commands into the terminal
+Clone or download and copy the files on github into an empty folder, then download the required modules by typing these commands into the terminal
 
 ```bash
 cd /path/to/the/folder/where/you/cloned/the/files
