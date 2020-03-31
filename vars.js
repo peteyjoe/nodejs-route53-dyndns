@@ -1,4 +1,4 @@
-const HOSTED_ZONE_ID = "Z2I7AU9P9J59CP"; //The ID of the hosted zone that you want to update
+const HOSTED_ZONE_ID = "ABCDEFGHIJKLMN"; //The ID of the hosted zone that you want to update
 
 const RECORD_SET = "example.peteyjoe.com"; //The record set that you want to update i.e. website.example.com
 
