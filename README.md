@@ -1,6 +1,6 @@
 # nodejs-route53-dyndns
 
-A Simple IPV4 Dynamic DNS Server built with nodejs for use with AWS Route53
+A Simple IPV4/IPV6 Dynamic DNS Server built with nodejs for use with AWS Route53
 
 ## Installation
 

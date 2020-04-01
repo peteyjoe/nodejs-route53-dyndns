@@ -1,6 +1,6 @@
 {
   "name": "dyndns-node-route53-server",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Dynamic DNS Server build with node.js for use with AWS Route53",
   "main": "index.js",
   "scripts": {

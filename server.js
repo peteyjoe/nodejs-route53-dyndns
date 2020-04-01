@@ -4,9 +4,18 @@ const { exec } = require('child_process')
 const { HOSTED_ZONE_ID, RECORD_SET, RECORD_SET_TYPE, TIME_TO_LIVE, REPEAT_CYCLE, DISPLAY_NOCHANGE_MESSAGE } = require('./vars')
 
 let ipStatus = false;
+let link = null;
 
 const checkIP = () => {
-    request('https://api.ipify.org?format=json', { json: true }, (err, res, body) => {
+    if (RECORD_SET_TYPE === "AAAA") {
+        link = 'https://api6.ipify.org?format=json';
+    } else if (RECORD_SET_TYPE === "A") {
+        link = 'https://api.ipify.org?format=json';
+    } else {
+        console.log('INVALID RECORD SET TYPE');
+        process.exit();
+    }
+    request(link, { json: true }, (err, res, body) => {
         if (err) {
             ipStatus = 'failedAPI';
             return null;
@@ -20,9 +29,14 @@ const checkIP = () => {
                     ipStatus = false;
                     return null;
                 } else {
-                    fs.writeFileSync('currentIP.txt', body.ip);
-                    ipStatus = body.ip;
-                    return null;
+                    fs.writeFile('currentIP.txt', body.ip, (err) => {
+                        if (err) {
+                            ipStatus = 'failedFILE'
+                        } else {
+                            ipStatus = body.ip;
+                            return null;
+                        }
+                    });
                 }
             }   
         });
@@ -56,7 +70,7 @@ const sendData = () => {
         });        
         console.log('ip has changed');
     }
-    setTimeout(sendData, REPEAT_CYCLE)
+    setTimeout(sendData, REPEAT_CYCLE);
 }
 
 sendData();
